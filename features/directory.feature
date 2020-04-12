@@ -7,7 +7,7 @@ Feature: check the  complete details of user
     When user should be able to login
     When directory is clicked
     When I enter valid name
-    When clicking the Search button
+    When click the Search button
     Then user details displayed
 
      Examples:

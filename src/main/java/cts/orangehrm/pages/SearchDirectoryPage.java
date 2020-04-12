@@ -15,8 +15,15 @@ import org.openqa.selenium.support.How;
 public class SearchDirectoryPage {
 	WebDriver driver;
 	/**
+	 * locating Directory
+	 */
+	@FindBy(how=How.XPATH,using="//b[contains(text(),'Directory')]")
+	@CacheLookup
+	WebElement directory;
+	/**
 	 * locating userid
 	 */
+	
 	@FindBy(how=How.ID,using="searchDirectory_emp_name_empName")
 	@CacheLookup
 	WebElement username;
@@ -35,10 +42,18 @@ public class SearchDirectoryPage {
 		this.driver=driver;
 	}
 	/**
+	 * method for clicking dirctry
+	 */
+	public void clickdirectry() {
+		directory.click();
+
+	}
+	/**
 	 * method for Specifiying userid
 	 * @param userid
 	 */
-	public void typeUserName(String userid) {
+	
+	public void typeemployeename(String userid) {
 		username.sendKeys(userid);
 
 	}

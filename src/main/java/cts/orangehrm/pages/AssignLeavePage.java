@@ -14,6 +14,9 @@ import org.openqa.selenium.support.How;
  */
 public class AssignLeavePage {
 	WebDriver driver;
+	@FindBy(how=How.XPATH,using="//td[1]//div[1]//a[1]//img[1]")
+	@CacheLookup
+	WebElement dbassign;
 	/**
 	 * locating username
 	 */
@@ -28,11 +31,23 @@ public class AssignLeavePage {
 	@CacheLookup
 	WebElement LeaveType;
 	/**
+	 * locating from calender
+	 */
+	@FindBy(how=How.XPATH,using="//li[4]//img[1]")
+	@CacheLookup
+	WebElement FromDatecalender;
+	/**
 	 * locating fromdate
 	 */
 	@FindBy(how=How.XPATH,using="//a[contains(text(),'23')]")
 	@CacheLookup
 	WebElement FromDate;
+	/**
+	 * locating to calender
+	 */
+	@FindBy(how=How.XPATH,using="//li[5]//img[1]")
+	@CacheLookup
+	WebElement ToDatecalender;
 
 	/**
 	 * locating todate
@@ -65,14 +80,61 @@ public class AssignLeavePage {
 		this.driver=driver;
 	}
 	/**
-	 * method for Specifiying userid,leavetype and partialdays
+	 * method for clicking assignleave
+	 */
+	public void clickdbassign() {
+		dbassign.click();
+
+	}
+	/**
+	 * method for Specifiying userid
 	 * @param userid
+	 */
+	public void typeUserName(String userid) {
+		username.sendKeys(userid);
+
+
+	}
+	/**
+	 * method for Specifiying leavetype
 	 * @param leavetype
+	 */
+	public void selectleavetype(String leavetype) {
+
+		LeaveType.sendKeys(leavetype);
+
+
+	}
+	/**
+	 * method for Clicking from calender
+	 */
+	public void clickfromdatecal() {
+		FromDatecalender.click();
+	}
+	/**
+	 * method for Clicking on fromdate
+	 */
+	public void clickfromdate() {
+		FromDate.click();
+	}
+	/**
+	 * method for Clicking to calender
+	 */
+	public void clicktodatecal() {
+		ToDatecalender.click();
+	}
+	/**
+	 * method for Clicking to date
+	 */
+	public void clickOntodate() {
+		ToDate.click();
+	}
+	/**
+	 * method for Specifiying partialdays
 	 * @param partialdays
 	 */
-	public void typeUserNameselectleavetypeandpartialdays(String userid,String leavetype,String partialdays) {
-		username.sendKeys(userid);
-		LeaveType.sendKeys(leavetype);
+	public void selectpartialdays(String partialdays) {
+
 		PartialDays.sendKeys(partialdays);
 
 	}

@@ -15,6 +15,13 @@ import org.openqa.selenium.support.How;
 public class SearchAdminPage {
 	WebDriver driver;
 	/**
+	 * locating admin
+	 */
+	@FindBy(how=How.XPATH,using="//b[contains(text(),'Admin')]")
+	@CacheLookup
+	WebElement adminbt;
+
+	/**
 	 * locating username
 	 */
 	@FindBy(how=How.ID,using="searchSystemUser_userName")
@@ -35,9 +42,18 @@ public class SearchAdminPage {
 		this.driver=driver;
 	}
 	/**
+	 * method for clicking admin
+	 */
+	public void clickadmin() {
+		adminbt.click();
+
+	}
+	/**
 	 * method for Specifiying userid
 	 * @param userid
 	 */
+
+
 	public void typeUserName(String userid) {
 		username.sendKeys(userid);
 

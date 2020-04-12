@@ -1,18 +1,13 @@
 package stepdefinition;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import cts.orangehrm.pages.AssignLeavePage;
 import cts.orangehrm.pages.LoginPageWithPageFactory;
 import cts.orangehrm.pages.SearchAdminPage;
@@ -24,7 +19,6 @@ import cts.orangehrm.utility.Screenshot;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
 /**
  * class created to write test cases for login,navigating to url,doing some operations and logout.
  * @author supriya
@@ -47,7 +41,6 @@ public class OrangehrmTest {
 	ExtentTest test = report.startTest("orangehrmtest");
 	Screenshot ob=new Screenshot();	
 	Logger logger;
-
 	@Given("^Open chrome and start application$")
 	/**
 	 * method to open browser
@@ -62,11 +55,7 @@ public class OrangehrmTest {
 		driver = b.startBrowser("chrome", config.getApplicationURL());
 		logger.info("Navigated to URL");
 		login=PageFactory.initElements(driver, LoginPageWithPageFactory.class);
-
-
 	}
-
-
 	@When("^I enter valid \"([^\"]*)\"$")
 	/**
 	 * method to enter username and password for login
@@ -85,59 +74,37 @@ public class OrangehrmTest {
 			password = (String )data[userCount-1][1];	
 			test.log(LogStatus.PASS, "Authentication sucessfully");
 		}
-		/*if(null!= usernameNumber && usernameNumber.trim().equalsIgnoreCase("1")) {
-			username = (String )data[0][0];
-			password = (String )data[0][1];	
-
-		}
-		if(null!= usernameNumber && usernameNumber.trim().equalsIgnoreCase("2")) {
-			username = (String )data[1][0];
-			password = (String )data[1][1];	
-			test.log(LogStatus.PASS, "Authentication Failed");
-		}
-		if(null!= usernameNumber && usernameNumber.trim().equalsIgnoreCase("3")) {
-			username = (String )data[2][0];
-			password = (String )data[2][1];	
-			test.log(LogStatus.PASS, "Authentication Failed");
-		}*/
-		driver.findElement(By.id("txtUsername")).sendKeys(username);
-		driver.findElement(By.id("txtPassword")).sendKeys(password); 
+		login.typeUserNameAndPassword(username, password);
 		logger.info("Credentials entered");
 	}
-
 	@When("^user should be able to login$")
 	/**
 	 * method to successfull login
 	 */
 	public void user_should_be_able_to_login() throws Throwable {
-		driver.findElement(By.id("btnLogin")).click();
+		login.clickOnLoginButton();
 		Assert.assertEquals("https://opensource-demo.orangehrmlive.com/index.php/dashboard", driver.getCurrentUrl());
 		System.out.println(driver.getCurrentUrl());
 		test.log(LogStatus.PASS, "Authentication sucessfully");
 		System.out.println("User is able to login sucessfully"); 
-
-
-
 	}
-
 	@When("^admin is clicked$")
 	/**
 	 * method to click admin
 	 * @throws Throwable
 	 */
 	public void admin_is_clicked() throws Throwable {
-		driver.findElement(By.xpath("//b[contains(text(),'Admin')]")).click();
 		adminpage=PageFactory.initElements(driver, SearchAdminPage.class);
+		adminpage.clickadmin();
 		logger.info("Admin is clicked");
 	}
-
 	@When("^I enter valid username$")
 	/**
 	 * method to enter username
 	 * @throws Throwable
 	 */
 	public void i_enter_valid_username() throws Throwable {
-		driver.findElement(By.id("searchSystemUser_userName")).sendKeys("Admin");
+		adminpage.typeUserName("Admin");
 		ob.getScreenshot(driver);
 		logger.info("username entered");
 	}
@@ -148,7 +115,7 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void clicking_the_Search_button() throws Throwable {
-		driver.findElement(By.id("searchBtn")).click();
+		adminpage.clickOnSearchButton();
 		logger.info("Search button clicked");
 	}
 	@When("^directory is clicked$")
@@ -157,30 +124,37 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void directory_is_clicked() throws Throwable {
-		driver.findElement(By.xpath("//b[contains(text(),'Directory')]")).click();
 		dirpage=PageFactory.initElements(driver, SearchDirectoryPage.class);
+		dirpage.clickdirectry();
 		ob.getScreenshot(driver);
 		logger.info("Directory is clicked");
 	}
-
 	@When("^I enter valid name$")
 	/**
 	 * method to enter employee name
 	 * @throws Throwable
 	 */
 	public void i_enter_valid_name() throws Throwable {
-		driver.findElement(By.id("searchDirectory_emp_name_empName")).sendKeys("Steven Edwards");
+		dirpage.typeemployeename("Steven Edwards");
 		logger.info("Employee name entered");
 	}
-
+	@When("^click the Search button$")
+	/**
+	 * method to click search button
+	 * @throws Throwable
+	 */
+	public void click_the_Search_button() throws Throwable {
+		dirpage.clickOnSearchButton();
+		logger.info("Search button clicked");
+	}
 	@When("^In dashboard assign leave is clicked$")
 	/**
 	 * method to click assign leave in dashboard
 	 * @throws Throwable
 	 */
 	public void in_dashboard_assign_leave_is_clicked() throws Throwable {
-		driver.findElement(By.xpath("//td[1]//div[1]//a[1]//img[1]")).click();
 		page=PageFactory.initElements(driver, AssignLeavePage.class);
+		page.clickdbassign();
 		logger.info("Assign leave is clicked ");
 	}
 
@@ -190,7 +164,7 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void i_enter_valid_Employee_Name() throws Throwable {
-		driver.findElement(By.id("assignleave_txtEmployee_empName")).sendKeys("Steven Edwards");
+		page.typeUserName("Steven Edwards");
 		ob.getScreenshot(driver);
 		logger.info("Employee name entered");
 	}
@@ -201,19 +175,37 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void select_leave_type() throws Throwable {
-		driver.findElement(By.id("assignleave_txtLeaveType")).sendKeys("Vacation US");
+		page.selectleavetype("Vacation US");
 		logger.info("leave type selected");
 	}
-
+	/**
+	 * method to click from calender
+	 * @throws Throwable
+	 */
+	@When("^I click from calender$")
+	public void i_click_from_calender() throws Throwable {
+		page.clickfromdatecal();
+		logger.info("From calender clicked");
+	}
 	@When("^I enter from date$")
 	/**
 	 * method to enter from date
 	 * @throws Throwable
 	 */
 	public void i_enter_from_date() throws Throwable {
-		driver.findElement(By.xpath("//li[4]//img[1]")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'23')]")).click();
+
+		page.clickfromdate();
 		logger.info("From date entered");
+	}
+	/**
+	 * method to click to calender
+	 * @throws Throwable
+	 */
+	@When("^I click to calender$")
+	public void i_click_to_calender() throws Throwable {
+		page.clicktodatecal();
+		logger.info("To calender clicked");
+
 	}
 
 	@When("^I enter to date$")
@@ -222,8 +214,8 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void i_enter_to_date() throws Throwable {
-		driver.findElement(By.xpath("//li[5]//img[1]")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'30')]")).click();
+
+		page.clickOntodate();
 		logger.info("To date entered");
 	}
 
@@ -233,7 +225,7 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void i_select_Partial_days() throws Throwable {
-		driver.findElement(By.id("assignleave_partialDays")).sendKeys("All Days");
+		page.selectpartialdays("All Days");
 		logger.info("Partial days selected");
 	}
 
@@ -243,7 +235,7 @@ public class OrangehrmTest {
 	 * @throws Throwable
 	 */
 	public void clicking_the_Assign_button() throws Throwable {
-		driver.findElement(By.id("assignBtn")).click();
+		page.clickOnAssignButton();
 		logger.info("Assign button clicked");
 
 	}
@@ -260,8 +252,6 @@ public class OrangehrmTest {
 		driver.quit();
 	}
 
-
-
 	@Then("^user details displayed$")
 	/**
 	 * method to display details
@@ -274,7 +264,6 @@ public class OrangehrmTest {
 		driver.quit();
 
 	}
-
 
 	@Then("^application should be closed$")
 	/**
