@@ -21,9 +21,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 /**
  * class created to write test cases for login,navigating to url,doing some operations and logout.
- * @author supriya
- * @author manasa
- * @author afreen
+ * @author supriya pathuri
  *
  */
 public class OrangehrmTest {

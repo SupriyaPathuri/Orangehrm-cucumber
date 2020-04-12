@@ -7,9 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import cts.orangehrm.utility.Configreader;
 /**
  * initialize the requested browser for the test i.e., chromedriver, firefoxdriver.
- * @author supriya
- * @author manasa
- * @author afreen
+ * @author supriya pathuri
  *
  */
 public class BrowserFactory extends Configreader  {

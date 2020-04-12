@@ -18,9 +18,7 @@ glue= {"stepdefinition"},
 plugin= {"html:target/cucumber-html.report"})
 /**
  * class created to run admin page
- * @author supriya
- * @author manasa
- * @author afreen
+ * @author supriya pathuri
  */
 public class TestRunner1 {
 	private TestNGCucumberRunner testRunner;

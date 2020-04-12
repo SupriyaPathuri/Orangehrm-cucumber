@@ -7,9 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * @author supriya
- * @author manasa
- * @author afreen
+ * @author supriya pathuri
  *class for searching details about an employee in directoty page
  */
 public class SearchDirectoryPage {

@@ -17,9 +17,7 @@ tags= {"@login"},
 glue= {"stepdefinition"},
 plugin= {"html:target/cucumber-html.report"})
 /**
- * @author supriya
- * @author manasa
- * @author afreen
+ * @author supriya pathuri
  * class created to run login page 
  */
 public class TestRunner {
