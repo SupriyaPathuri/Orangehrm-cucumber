@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * @author afreen
+ * @author supriya pathuri
  *class for assigning leave to an employee
  */
 public class AssignLeavePage {

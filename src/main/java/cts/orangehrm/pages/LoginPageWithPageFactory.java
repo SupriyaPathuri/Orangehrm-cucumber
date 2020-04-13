@@ -5,7 +5,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 /**
- * @author afreen
+ * @author supriya pathuri
  * class for logging into website with valid credentials
  *
  */

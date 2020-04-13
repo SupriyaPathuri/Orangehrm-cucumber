@@ -6,7 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 /**
  * class reads the data from excel sheet
- * @author afreen
+ * @author supriya pathuri
  */
 public class ExcelDataConfig {
 	XSSFWorkbook wb;

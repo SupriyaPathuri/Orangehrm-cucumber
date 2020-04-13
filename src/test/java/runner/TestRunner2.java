@@ -19,7 +19,7 @@ glue= {"stepdefinition"},
 plugin= {"html:target/cucumber-html.report"})
 /**
  * class created to run directory page
- *@author afreen
+ *@author supriya pathuri
  */
 public class TestRunner2 {
 	private TestNGCucumberRunner testRunner;
