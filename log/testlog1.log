@@ -563,3 +563,28 @@
 2020-04-12 20:49:13,237 [main] INFO stepdefinition - Partial days selected
 2020-04-12 20:49:13,308 [main] INFO stepdefinition - Assign button clicked
 2020-04-12 20:49:13,309 [main] INFO stepdefinition - Leave assigned 
+2020-04-12 23:34:05,118 [main] INFO stepdefinition - Chrome Driver Opened
+2020-04-12 23:34:13,607 [main] INFO stepdefinition - Navigated to URL
+2020-04-12 23:34:13,873 [main] INFO stepdefinition - Credentials entered
+2020-04-12 23:34:15,819 [main] INFO stepdefinition - Application is closed
+2020-04-12 23:34:22,113 [main] INFO stepdefinition - Chrome Driver Opened
+2020-04-12 23:34:28,919 [main] INFO stepdefinition - Navigated to URL
+2020-04-12 23:34:29,118 [main] INFO stepdefinition - Credentials entered
+2020-04-12 23:34:30,884 [main] INFO stepdefinition - Admin is clicked
+2020-04-12 23:34:31,073 [main] INFO stepdefinition - Chrome Driver Opened
+2020-04-12 23:34:37,628 [main] INFO stepdefinition - Navigated to URL
+2020-04-12 23:34:37,886 [main] INFO stepdefinition - Credentials entered
+2020-04-12 23:34:41,287 [main] INFO stepdefinition - Directory is clicked
+2020-04-12 23:34:41,499 [main] INFO stepdefinition - Chrome Driver Opened
+2020-04-12 23:34:49,180 [main] INFO stepdefinition - Navigated to URL
+2020-04-12 23:34:49,409 [main] INFO stepdefinition - Credentials entered
+2020-04-12 23:34:54,235 [main] INFO stepdefinition - Assign leave is clicked 
+2020-04-12 23:34:54,764 [main] INFO stepdefinition - Employee name entered
+2020-04-12 23:34:54,907 [main] INFO stepdefinition - leave type selected
+2020-04-12 23:34:55,026 [main] INFO stepdefinition - From calender clicked
+2020-04-12 23:34:55,154 [main] INFO stepdefinition - From date entered
+2020-04-12 23:34:55,516 [main] INFO stepdefinition - To calender clicked
+2020-04-12 23:34:55,665 [main] INFO stepdefinition - To date entered
+2020-04-12 23:34:55,791 [main] INFO stepdefinition - Partial days selected
+2020-04-12 23:34:55,883 [main] INFO stepdefinition - Assign button clicked
+2020-04-12 23:34:55,884 [main] INFO stepdefinition - Leave assigned 

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * @author supriya pathuri
- *class for searching details about an employee in directoty page
+ * @author afreen
+ *class for searching details about an employrectoty page
  */
 public class SearchDirectoryPage {
 	WebDriver driver;

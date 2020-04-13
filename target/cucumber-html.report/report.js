@@ -194,7 +194,7 @@ formatter.match({
   "location": "OrangehrmTest.open_chrome_and_start_application()"
 });
 formatter.result({
-  "duration": 7519108259,
+  "duration": 7769283457,
   "status": "passed"
 });
 formatter.match({
@@ -207,84 +207,84 @@ formatter.match({
   "location": "OrangehrmTest.i_enter_valid_and_valid(String)"
 });
 formatter.result({
-  "duration": 174581904,
+  "duration": 224413578,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.user_should_be_able_to_login()"
 });
 formatter.result({
-  "duration": 1866660550,
+  "duration": 3475440600,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.in_dashboard_assign_leave_is_clicked()"
 });
 formatter.result({
-  "duration": 2805185778,
+  "duration": 1351018488,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_enter_valid_Employee_Name()"
 });
 formatter.result({
-  "duration": 513787761,
+  "duration": 528079213,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.select_leave_type()"
 });
 formatter.result({
-  "duration": 116467606,
+  "duration": 141982287,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_click_from_calender()"
 });
 formatter.result({
-  "duration": 91758683,
+  "duration": 119382533,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_enter_from_date()"
 });
 formatter.result({
-  "duration": 136346130,
+  "duration": 126019659,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_click_to_calender()"
 });
 formatter.result({
-  "duration": 381257467,
+  "duration": 362624961,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_enter_to_date()"
 });
 formatter.result({
-  "duration": 71939816,
+  "duration": 146470219,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.i_select_Partial_days()"
 });
 formatter.result({
-  "duration": 95111982,
+  "duration": 126379871,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.clicking_the_Assign_button()"
 });
 formatter.result({
-  "duration": 70251273,
+  "duration": 91761704,
   "status": "passed"
 });
 formatter.match({
   "location": "OrangehrmTest.leave_is_assigned_to_employee()"
 });
 formatter.result({
-  "duration": 5821723840,
+  "duration": 5832361062,
   "status": "passed"
 });
 });

@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 /**
  * Class reads base settings from the config.properties file
- * @author supriya pathuri
+ * @author afreen
  *
  */
 public class Configreader {

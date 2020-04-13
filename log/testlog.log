@@ -563,3 +563,28 @@
 2020-04-12 20:49:13,237 - stepdefinition -INFO - Partial days selected
 2020-04-12 20:49:13,308 - stepdefinition -INFO - Assign button clicked
 2020-04-12 20:49:13,309 - stepdefinition -INFO - Leave assigned 
+2020-04-12 23:34:05,118 - stepdefinition -INFO - Chrome Driver Opened
+2020-04-12 23:34:13,607 - stepdefinition -INFO - Navigated to URL
+2020-04-12 23:34:13,873 - stepdefinition -INFO - Credentials entered
+2020-04-12 23:34:15,819 - stepdefinition -INFO - Application is closed
+2020-04-12 23:34:22,113 - stepdefinition -INFO - Chrome Driver Opened
+2020-04-12 23:34:28,919 - stepdefinition -INFO - Navigated to URL
+2020-04-12 23:34:29,118 - stepdefinition -INFO - Credentials entered
+2020-04-12 23:34:30,884 - stepdefinition -INFO - Admin is clicked
+2020-04-12 23:34:31,073 - stepdefinition -INFO - Chrome Driver Opened
+2020-04-12 23:34:37,628 - stepdefinition -INFO - Navigated to URL
+2020-04-12 23:34:37,886 - stepdefinition -INFO - Credentials entered
+2020-04-12 23:34:41,287 - stepdefinition -INFO - Directory is clicked
+2020-04-12 23:34:41,499 - stepdefinition -INFO - Chrome Driver Opened
+2020-04-12 23:34:49,180 - stepdefinition -INFO - Navigated to URL
+2020-04-12 23:34:49,409 - stepdefinition -INFO - Credentials entered
+2020-04-12 23:34:54,235 - stepdefinition -INFO - Assign leave is clicked 
+2020-04-12 23:34:54,764 - stepdefinition -INFO - Employee name entered
+2020-04-12 23:34:54,907 - stepdefinition -INFO - leave type selected
+2020-04-12 23:34:55,026 - stepdefinition -INFO - From calender clicked
+2020-04-12 23:34:55,154 - stepdefinition -INFO - From date entered
+2020-04-12 23:34:55,516 - stepdefinition -INFO - To calender clicked
+2020-04-12 23:34:55,665 - stepdefinition -INFO - To date entered
+2020-04-12 23:34:55,791 - stepdefinition -INFO - Partial days selected
+2020-04-12 23:34:55,883 - stepdefinition -INFO - Assign button clicked
+2020-04-12 23:34:55,884 - stepdefinition -INFO - Leave assigned 

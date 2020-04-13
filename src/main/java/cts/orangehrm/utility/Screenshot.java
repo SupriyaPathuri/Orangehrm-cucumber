@@ -9,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 /**
  * class to cpature screenshot
- * @author supriya pathuri
+ * @author afreen
  *
  */
 public class Screenshot {

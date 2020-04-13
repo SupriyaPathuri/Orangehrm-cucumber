@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 /**
- * @author supriya pathuri
+ * @author afreen
  *class for searching specific system user in admin page
  */
 public class SearchAdminPage {
